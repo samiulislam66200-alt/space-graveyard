@@ -118,7 +118,7 @@ export const opportunityRover: MissionData = {
     {
       title: 'Discovery of Jarosite (Acidic Water Evidence)',
       description: 'Mössbauer spectrometer detected jarosite, a potassium iron sulfate hydroxide mineral.',
-      scientificSignificance: 'Jarosite requires acidic, sulfur-rich liquid water to form, proving ancient Meridiani Planum was covered in saline, acidic lakes.',
+      scientificSignificance: 'Jarosite provided evidence for acidic, water-related alteration in the ancient Martian environment.',
       sourceUrl: 'https://mars.nasa.gov/news/press-releases/2004/jarosite-discovery/',
       attribution: 'NASA JPL Press Release',
       factType: 'FACT'
@@ -141,7 +141,7 @@ export const opportunityRover: MissionData = {
 
   landingLocation: {
     latitude: -1.9483,
-    longitude: 354.4742,
+    longitude: 354.47417,
     regionName: 'Meridiani Planum',
     featureName: 'Eagle Crater',
     celestialBody: 'Mars',
@@ -167,7 +167,7 @@ export const opportunityRover: MissionData = {
       dateStr: '2004-01-25',
       coordinate: {
         latitude: -1.9483,
-        longitude: 354.4742,
+        longitude: 354.47417,
         regionName: 'Meridiani Planum',
         featureName: 'Eagle Crater Landing Site',
         celestialBody: 'Mars',
@@ -199,21 +199,21 @@ export const opportunityRover: MissionData = {
   ],
 
   missionEndReason: {
-    value: 'Catastrophic power depletion caused by a planet-encircling atmospheric dust storm in June 2018. Solar panel radiation absorption dropped to insufficient levels for battery survival heater operation.',
+    value: 'A Mars-wide dust storm severely reduced sunlight reaching Opportunity\'s solar arrays. The rover lost communication on June 10, 2018. After more than 1,000 recovery commands failed, NASA declared the mission complete on February 13, 2019.',
     sourceUrl: 'https://www.jpl.nasa.gov/news/nasas-opportunity-rover-dies-on-mars',
     attribution: 'NASA JPL MER Project Statement',
     factType: 'FACT'
   },
 
   silenceCauseDetails: {
-    value: 'Solar arrays became completely covered in atmospheric dust. Without power, mission clocks lost synchronization and internal heaters failed, leading to fatal freezing of electronic components during the Martian night.',
+    value: 'A Mars-wide dust storm severely reduced sunlight reaching Opportunity\'s solar arrays. The rover lost communication on June 10, 2018. After more than 1,000 recovery commands failed, NASA declared the mission complete on February 13, 2019.',
     sourceUrl: 'https://mars.nasa.gov/news/8413/nasas-opportunity-rover-mission-exits-silent-mode/',
     attribution: 'NASA JPL Engineering',
     factType: 'FACT'
   },
 
   scientificLegacy: {
-    value: 'Revolutionized human understanding of Mars as a dynamic planet that once possessed liquid water environments capable of supporting microbial life. Demonstrated the viability of long-term mobile planetary exploration.',
+    value: 'Revolutionized human understanding of Mars as a dynamic planet that once possessed liquid water environments. Demonstrated the viability of long-term mobile planetary exploration.',
     sourceUrl: 'https://www.nasa.gov/press-release/nasa-s-record-setting-opportunity-rover-mission-comes-to-end',
     attribution: 'NASA Administrator Statement',
     factType: 'INTERPRETATION'
@@ -222,7 +222,7 @@ export const opportunityRover: MissionData = {
   lastSignal: {
     lastCommDate: '2018-06-10',
     lastActivity: 'Measuring atmospheric dust opacity (tau = 10.8) inside Perseverance Valley on Sol 5111.',
-    endingEvent: 'Global Mars dust storm completely obscured sunlight, triggering automatic low-power sleep mode.',
+    endingEvent: 'Global Mars dust storm severely reduced sunlight, and the rover lost communication on June 10, 2018.',
     finalLocation: {
       latitude: -2.224,
       longitude: 354.654,
@@ -233,8 +233,8 @@ export const opportunityRover: MissionData = {
       sourceUrl: 'https://www.jpl.nasa.gov/news/nasas-opportunity-rover-dies-on-mars',
       attribution: 'NASA JPL MER Project'
     },
-    causeOfSilence: 'Solar panel dust coverage prevented battery recharge; survival heaters failed during cold Martian night.',
-    scientificLegacySummary: 'Set off-world driving record of 45.16 km and proved ancient habitable water existed on Mars.'
+    causeOfSilence: 'A Mars-wide dust storm severely reduced sunlight reaching Opportunity\'s solar arrays. Communication was lost on June 10, 2018; NASA declared mission complete on Feb 13, 2019.',
+    scientificLegacySummary: 'Set off-world driving record of 45.16 km and provided evidence for ancient water-related alteration on Mars.'
   },
 
   timeline: [
@@ -257,8 +257,8 @@ export const opportunityRover: MissionData = {
     {
       id: 'opp-3',
       date: '2004-03-02',
-      title: 'Discovery of Hematite & Past Liquid Water',
-      description: 'Confirmed hematite blueberries precipitated from liquid water.',
+      title: 'Discovery of Jarosite & Mineral Concretions',
+      description: 'Jarosite provided evidence for acidic, water-related alteration in ancient Martian environment.',
       category: 'Discovery',
       nasaRefUrl: 'https://mars.nasa.gov/news/press-releases/2004/jarosite-discovery/'
     },
@@ -274,7 +274,7 @@ export const opportunityRover: MissionData = {
       id: 'opp-5',
       date: '2018-06-10',
       title: 'Sol 5111 Last Signal in Perseverance Valley',
-      description: 'Global dust storm blocked solar arrays; final comm frame received.',
+      description: 'Global dust storm severely reduced sunlight; final comm received.',
       category: 'Last Signal',
       nasaRefUrl: 'https://mars.nasa.gov/news/8413/nasas-opportunity-rover-mission-exits-silent-mode/'
     },

@@ -83,7 +83,7 @@ export const insightLander: MissionData = {
   ],
 
   scientificPurpose: {
-    value: 'Map the internal layering (crust, mantle, core) of a terrestrial planet for the first time outside of Earth and Moon.',
+    value: 'Study the internal layering (crust, mantle, core) of Mars using seismic data.',
     sourceUrl: 'https://mars.nasa.gov/insight/science/overview/',
     attribution: 'NASA Science Mission Directorate',
     factType: 'FACT'
@@ -91,9 +91,9 @@ export const insightLander: MissionData = {
 
   discoveries: [
     {
-      title: 'First Comprehensive Map of Mars Interior',
-      description: 'InSight data revealed Martian crust thickness is 20 to 40 km, mantle extends to 1,560 km, and liquid metallic core radius is ~1,830 km.',
-      scientificSignificance: 'Proved Mars core is liquid iron-nickel enriched in lighter elements like sulfur and oxygen.',
+      title: 'Revealing the Interior of Mars',
+      description: 'InSight seismic data provided new constraints on the thickness and structure of Mars\' crust, mantle and core.',
+      scientificSignificance: 'Provided key seismic data indicating a crustal thickness of 20 to 40 km, mantle layering, and a liquid metal core.',
       sourceUrl: 'https://www.nasa.gov/news-release/nasas-insight-reveals-the-deep-interior-of-mars/',
       attribution: 'Science Magazine / NASA JPL',
       factType: 'FACT'
@@ -115,25 +115,25 @@ export const insightLander: MissionData = {
   },
 
   landingLocation: {
-    latitude: 4.5024,
-    longitude: 135.6234,
+    latitude: 4.5,
+    longitude: 135.9,
     regionName: 'Elysium Planitia',
-    featureName: 'Homestead Hollow',
+    featureName: 'Homestead Hollow (approx. 4.5° N, 135.9° E)',
     celestialBody: 'Mars',
     referenceFrame: 'IAU Mars 2000',
     sourceUrl: 'https://mars.nasa.gov/insight/timeline/landing/summary/',
-    attribution: 'NASA JPL InSight Landing Team'
+    attribution: 'NASA Public Mission Record / JPL'
   },
 
   finalLastKnownLocation: {
-    latitude: 4.5024,
-    longitude: 135.6234,
+    latitude: 4.5,
+    longitude: 135.9,
     regionName: 'Elysium Planitia',
-    featureName: 'Homestead Hollow',
+    featureName: 'Homestead Hollow (approx. 4.5° N, 135.9° E)',
     celestialBody: 'Mars',
     referenceFrame: 'IAU Mars 2000',
     sourceUrl: 'https://www.jpl.nasa.gov/news/nasas-insight-retires-after-insightful-mission-on-mars',
-    attribution: 'NASA JPL / MRO HiRISE Orbital Photos'
+    attribution: 'NASA Public Mission Record / JPL'
   },
 
   routeData: null,
@@ -153,7 +153,7 @@ export const insightLander: MissionData = {
   },
 
   scientificLegacy: {
-    value: 'Provided humanity with the first 3D structural atlas of Mars interior, transforming planetary geophysics and terrestrial planet evolution models.',
+    value: 'InSight seismic data provided new constraints on the thickness and structure of Mars\' crust, mantle and core, expanding understanding of planetary geophysics.',
     sourceUrl: 'https://www.jpl.nasa.gov/news/nasas-insight-retires-after-insightful-mission-on-mars',
     attribution: 'NASA Science Mission Directorate',
     factType: 'INTERPRETATION'
@@ -164,17 +164,17 @@ export const insightLander: MissionData = {
     lastActivity: 'Transmitted final engineering status frame and environmental data from Elysium Planitia on Dec 15, 2022.',
     endingEvent: 'Daily energy production fell below survival threshold due to heavy dust accumulation on solar arrays.',
     finalLocation: {
-      latitude: 4.5024,
-      longitude: 135.6234,
+      latitude: 4.5,
+      longitude: 135.9,
       regionName: 'Elysium Planitia',
-      featureName: 'Homestead Hollow',
+      featureName: 'Homestead Hollow (approx. 4.5° N, 135.9° E)',
       celestialBody: 'Mars',
       referenceFrame: 'IAU Mars 2000',
       sourceUrl: 'https://www.jpl.nasa.gov/news/nasas-insight-retires-after-insightful-mission-on-mars',
-      attribution: 'NASA JPL'
+      attribution: 'NASA Public Mission Record / JPL'
     },
     causeOfSilence: 'Atmospheric dust coverage reduced solar power output below survival heater threshold.',
-    scientificLegacySummary: 'Mapped Mars interior layers (crust, mantle, core) and recorded >1,300 marsquakes.'
+    scientificLegacySummary: 'InSight seismic data provided new constraints on the thickness and structure of Mars\' crust, mantle and core.'
   },
 
   timeline: [
@@ -190,7 +190,7 @@ export const insightLander: MissionData = {
       id: 'ins-2',
       date: '2018-11-26',
       title: 'Touchdown at Elysium Planitia',
-      description: 'Landed at Homestead Hollow plain.',
+      description: 'Landed at Homestead Hollow plain (approx. 4.5° N, 135.9° E).',
       category: 'Arrival',
       nasaRefUrl: 'https://mars.nasa.gov/insight/'
     },
@@ -205,8 +205,8 @@ export const insightLander: MissionData = {
     {
       id: 'ins-4',
       date: '2021-07-22',
-      title: 'First 3D Atlas of Mars Core & Crust Published',
-      description: 'Data published in Science revealing liquid metal core radius (~1,830 km).',
+      title: 'Seismic Interior Structure Results Published',
+      description: 'InSight seismic data provided new constraints on Mars\' crust, mantle and core.',
       category: 'Discovery',
       nasaRefUrl: 'https://www.nasa.gov/news-release/nasas-insight-reveals-the-deep-interior-of-mars/'
     },

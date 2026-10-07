@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { MissionData, PlanetaryCoordinate } from '../../types/mission';
 import { ALL_MISSIONS } from '../../data/missions';
-import { MapPin, Navigation, ExternalLink, ShieldCheck, Info } from 'lucide-react';
+import { MapPin, Navigation, ExternalLink, ShieldCheck } from 'lucide-react';
 
 interface SurfaceMapProps {
   mission?: MissionData;
@@ -200,12 +200,12 @@ export default function PlanetarySurfaceMap({ mission, initialBody = 'Mars', sho
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="p-3 bg-[#0b101d] rounded border border-space-border/60">
-              <div className="text-slate-400 text-[10px]">EXACT LATITUDE</div>
+              <div className="text-slate-400 text-[10px]">LATITUDE</div>
               <div className="text-slate-100 font-bold mt-0.5">{activeMission.landingLocation.latitude.toFixed(5)}°</div>
             </div>
 
             <div className="p-3 bg-[#0b101d] rounded border border-space-border/60">
-              <div className="text-slate-400 text-[10px]">EXACT LONGITUDE</div>
+              <div className="text-slate-400 text-[10px]">LONGITUDE</div>
               <div className="text-slate-100 font-bold mt-0.5">{activeMission.landingLocation.longitude.toFixed(5)}°</div>
             </div>
 
@@ -231,7 +231,7 @@ export default function PlanetarySurfaceMap({ mission, initialBody = 'Mars', sho
           <div className="flex items-center justify-between pt-2 border-t border-space-border/40 text-[11px] text-slate-400">
             <span className="flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
-              Verified NASA Coordinates: Zero fabricated location data
+              NASA Surface Coordinates (Archival / Regional Location)
             </span>
 
             <a

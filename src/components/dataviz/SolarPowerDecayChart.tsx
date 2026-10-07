@@ -1,9 +1,8 @@
 'use client';
 
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { ExternalLink, HelpCircle, Zap } from 'lucide-react';
+import { ExternalLink, HelpCircle } from 'lucide-react';
 
-// Real verified NASA InSight solar power generation telemetry points (Watt-hours / sol)
 const insightPowerDecayData = [
   { sol: 1, date: 'Nov 2018', insightWh: 4980, status: 'Landing: Clean panels, full sun' },
   { sol: 300, date: 'Sep 2019', insightWh: 4200, status: 'Gradual dust accumulation' },
@@ -84,7 +83,7 @@ export default function SolarPowerDecayChart() {
 
         <div className="p-3 bg-slate-950 rounded border border-space-border/60 flex flex-col justify-between">
           <div>
-            <div className="text-emerald-400 font-bold uppercase text-[10px]">VERIFIED NASA SOURCE</div>
+            <div className="text-emerald-400 font-bold uppercase text-[10px]">NASA ARCHIVAL DATA SOURCE</div>
             <div className="text-slate-400 text-xs font-sans mt-1">NASA JPL InSight Engineering Log</div>
           </div>
           <a

@@ -1,14 +1,14 @@
 'use client';
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { ExternalLink, ShieldCheck, HelpCircle } from 'lucide-react';
+import { ExternalLink, HelpCircle } from 'lucide-react';
 
 const lifespanData = [
   {
     name: 'Opportunity Rover',
     body: 'Mars',
-    planned: 90,
-    actual: 5352,
+    planned: 90, // Sols
+    actual: 5352, // Sols
     multiplier: '59.4x',
     unit: 'Sols',
     source: 'https://mars.nasa.gov/mer/mission/overview/'
@@ -16,38 +16,38 @@ const lifespanData = [
   {
     name: 'InSight Lander',
     body: 'Mars',
-    planned: 709,
-    actual: 1440,
+    planned: 708, // Sols (1 Mars Year / 2 Earth years)
+    actual: 1440, // Sols
     multiplier: '2.03x',
     unit: 'Sols',
     source: 'https://mars.nasa.gov/insight/mission/overview/'
   },
   {
-    name: 'Apollo 15 LRV-002',
+    name: 'Apollo 15 LRV',
     body: 'Moon',
-    planned: 24,
-    actual: 66.9,
-    multiplier: '2.79x',
+    planned: 78, // Hours baseline design
+    actual: 78, // Completed all 3 EVAs (3.1 days surface)
+    multiplier: '1.0x',
     unit: 'Hours',
     source: 'https://history.nasa.gov/alsj/a15/a15.html'
   },
   {
-    name: 'Apollo 11 EASEP PSEP',
+    name: 'Surveyor 3',
     body: 'Moon',
-    planned: 14,
-    actual: 21,
-    multiplier: '1.50x',
+    planned: 14, // Days (1 lunar day)
+    actual: 14, // Days (frozen on night 1)
+    multiplier: '1.0x',
     unit: 'Days',
-    source: 'https://nssdc.gsfc.nasa.gov/nmc/experiment/display.action?id=1969-059C-01'
+    source: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A'
   },
   {
-    name: 'Surveyor 3 Lander',
+    name: 'Apollo 11 Eagle',
     body: 'Moon',
-    planned: 14,
-    actual: 13,
-    multiplier: '0.93x',
-    unit: 'Days',
-    source: 'https://history.nasa.gov/SP-184/sp184.htm'
+    planned: 21.5, // Hours surface stay
+    actual: 21.5,
+    multiplier: '1.0x',
+    unit: 'Hours',
+    source: 'https://history.nasa.gov/alsj/a11/a11.html'
   }
 ];
 
@@ -117,7 +117,7 @@ export default function MissionLifespanChart() {
 
         <div className="p-3 bg-slate-950 rounded border border-space-border/60 flex flex-col justify-between">
           <div>
-            <div className="text-emerald-400 font-bold uppercase text-[10px]">VERIFIED NASA SOURCE</div>
+            <div className="text-emerald-400 font-bold uppercase text-[10px]">NASA ARCHIVAL DATA SOURCE</div>
             <div className="text-slate-400 text-xs font-sans mt-1">NASA JPL MER &amp; InSight Telemetry</div>
           </div>
           <a

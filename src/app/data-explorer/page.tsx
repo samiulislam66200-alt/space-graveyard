@@ -15,7 +15,7 @@ export default function DataExplorerPage() {
           NASA Data Explorer
         </h1>
         <p className="text-slate-400 font-sans max-w-2xl text-sm sm:text-base">
-          100% transparent inventory of official NASA Planetary Data System (PDS), JPL Photojournal, and NSSDC master catalog sources used across SPACE GRAVEYARD.
+          Transparent inventory of official NASA Planetary Data System (PDS), JPL Photojournal, and NSSDC master catalog sources used across SPACE GRAVEYARD.
         </p>
       </div>
 
@@ -41,10 +41,10 @@ export default function DataExplorerPage() {
                       href={src.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-amber-400 hover:underline"
+                      className="text-amber-400 hover:underline flex items-center gap-1 font-semibold"
                     >
-                      <span>Access Dataset</span>
-                      <ExternalLink className="w-3 h-3" />
+                      <span>View Source</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </td>
                 </tr>

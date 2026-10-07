@@ -36,7 +36,7 @@ export default function Footer() {
           </p>
           <div className="pt-2">
             <span className="inline-block px-2 py-0.5 rounded text-[10px] bg-cyan-950 text-cyan-400 border border-cyan-800">
-              100% VERIFIED NASA DATA
+              NASA-SOURCED ARCHIVAL DATA
             </span>
           </div>
         </div>

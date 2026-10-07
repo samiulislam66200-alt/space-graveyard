@@ -33,14 +33,14 @@ export const perseveranceEDL: MissionData = {
   },
 
   missionObjective: {
-    value: 'Protect the Perseverance rover and Ingenuity helicopter during atmospheric entry (20,000 km/h), decelerate to subsonic velocity via supersonic parachute, and lower the rover onto Jezero Crater via Skycrane tether.',
+    value: 'Protect the Perseverance rover and Ingenuity helicopter during atmospheric entry (20,000 km/h), decelerate to subsonic velocity via supersonic parachute, and lower the rover safely onto Jezero Crater via Skycrane tether.',
     sourceUrl: 'https://mars.nasa.gov/mars2020/timeline/landing/entry-descent-landing/',
     attribution: 'NASA JPL Mars 2020 Team',
     factType: 'FACT'
   },
 
   hardwareDescription: {
-    value: 'A multi-part entry and landing stack comprising: 1) Carbon-phenolic Heat Shield; 2) Backshell with 21.5-meter supersonic orange-and-white nylon parachute; 3) 8-thruster monopropellant rocket Descent Stage (Skycrane).',
+    value: 'Entry, descent, and landing (EDL) hardware that delivered Perseverance to Jezero Crater. Comprises: 1) Carbon-phenolic Heat Shield; 2) Backshell with 21.5-meter supersonic orange-and-white nylon parachute; 3) 8-thruster monopropellant rocket Descent Stage (Skycrane).',
     sourceUrl: 'https://mars.nasa.gov/mars2020/spacecraft/rover/edl/',
     attribution: 'NASA JPL Spacecraft Architecture',
     factType: 'FACT'
@@ -63,7 +63,7 @@ export const perseveranceEDL: MissionData = {
   components: [
     {
       name: 'Descent Stage ("Skycrane")',
-      description: '8-thruster hydrazine rocket stage that hovered 20 meters above Mars surface while lowering Perseverance via nylon tethers.',
+      description: '8-thruster hydrazine rocket stage that hovered 20 meters above Mars surface while lowering Perseverance via nylon tethers, followed by a planned flyaway impact.',
       role: 'Final touchdown maneuver and controlled flyaway crash ~700m NW.',
       materialComposition: 'Titanium framework and carbon-composite tanks.',
       sourceUrl: 'https://mars.nasa.gov/mars2020/spacecraft/rover/edl/'
@@ -75,16 +75,16 @@ export const perseveranceEDL: MissionData = {
       name: 'Mars Entry, Descent, and Landing Instrumentation 2',
       acronym: 'MEDLI2',
       description: 'Suite of 28 pressure, temperature, and heat flux sensors embedded throughout the heat shield and backshell.',
-      scientificPurpose: 'Measure aero-thermal performance and atmospheric entry heating in real time.',
+      scientificPurpose: 'Measure aero-thermal performance and atmospheric entry heating during descent.',
       whatItMeasured: 'Sub-surface heat shield temperatures, drag pressures, and atmospheric density profiles.',
-      statusAtMissionEnd: 'Operational throughout descent; destroyed upon impact after separation.',
+      statusAtMissionEnd: 'Operational throughout descent; destroyed upon planned impact after separation.',
       sourceUrl: 'https://mars.nasa.gov/mars2020/spacecraft/instruments/medli2/',
       attribution: 'NASA Langley / NASA Ames / NASA JPL'
     }
   ],
 
   scientificPurpose: {
-    value: 'Deliver Perseverance safely onto Jezero Crater crater floor and characterize Mars atmospheric entry heating and parachute physics.',
+    value: 'Safely deliver the Perseverance rover to Jezero Crater and collect real-time engineering telemetry (MEDLI2) during atmospheric entry.',
     sourceUrl: 'https://mars.nasa.gov/mars2020/science/goals/',
     attribution: 'NASA Science Directorate',
     factType: 'FACT'
@@ -93,8 +93,8 @@ export const perseveranceEDL: MissionData = {
   discoveries: [
     {
       title: 'First HD Color Video & Audio of Martian Entry & Landing',
-      description: 'EDL cameras captured full 230-second video of parachute deployment, heat shield drop, and skycrane touchdown.',
-      scientificSignificance: 'Validated supersonic parachute inflation behavior under real Martian atmospheric conditions.',
+      description: 'EDL engineering cameras captured full 230-second video of parachute deployment, heat shield drop, and skycrane touchdown.',
+      scientificSignificance: 'Validated supersonic parachute inflation behavior and engineering dynamics under real Martian atmospheric conditions.',
       sourceUrl: 'https://mars.nasa.gov/news/8870/nasas-mars-2020-perseverance-rover-sends-first-hd-video-of-landing/',
       attribution: 'NASA JPL Press Release',
       factType: 'FACT'
@@ -119,7 +119,7 @@ export const perseveranceEDL: MissionData = {
     latitude: 18.4447,
     longitude: 77.4508,
     regionName: 'Jezero Crater',
-    featureName: 'Octavia E. Butler Landing Site (Rover Touchdown)',
+    featureName: 'Octavia E. Butler Landing Site (Perseverance Rover Touchdown Point)',
     celestialBody: 'Mars',
     referenceFrame: 'IAU Mars 2000',
     sourceUrl: 'https://mars.nasa.gov/mars2020/timeline/landing/summary/',
@@ -130,7 +130,7 @@ export const perseveranceEDL: MissionData = {
     latitude: 18.449,
     longitude: 77.443,
     regionName: 'Jezero Crater Floor',
-    featureName: 'Descent Stage Impact Zone (Parachute at 18.455° N, 77.439° E)',
+    featureName: 'Descent Stage Impact Zone (~700m NW of Rover Touchdown; Parachute/Backshell at ~18.455° N, 77.439° E)',
     celestialBody: 'Mars',
     referenceFrame: 'IAU Mars 2000',
     sourceUrl: 'https://photojournal.jpl.nasa.gov/catalog/PIA24420',
@@ -140,21 +140,21 @@ export const perseveranceEDL: MissionData = {
   routeData: null,
 
   missionEndReason: {
-    value: 'The EDL hardware fulfilled its design purpose upon landing Perseverance and was intentionally separated/discarded across Jezero Crater.',
+    value: 'The EDL hardware successfully fulfilled its delivery mission upon lowering Perseverance to Jezero Crater. As planned, the Descent Stage executed a controlled flyaway maneuver to impact the surface.',
     sourceUrl: 'https://mars.nasa.gov/mars2020/timeline/landing/',
     attribution: 'NASA JPL Mars 2020 Team',
     factType: 'FACT'
   },
 
   silenceCauseDetails: {
-    value: 'Descent stage rocket engines expended remaining hydrazine propellant during the 1.5 km controlled flyaway maneuver, impacting the ground at ~100 km/h as planned.',
+    value: 'Descent stage rocket engines expended remaining hydrazine propellant during the planned controlled flyaway maneuver, impacting the ground at ~100 km/h away from the rover.',
     sourceUrl: 'https://mars.nasa.gov/mars2020/timeline/landing/entry-descent-landing/',
     attribution: 'NASA JPL EDL Flight Dynamics',
     factType: 'FACT'
   },
 
   scientificLegacy: {
-    value: 'Pioneered Terrain-Relative Navigation (TRN) and MEDLI2 instrumentation, establishing the engineering benchmark for future Mars Sample Return landers.',
+    value: 'Pioneered Terrain-Relative Navigation (TRN) and MEDLI2 atmospheric entry telemetry, establishing the engineering foundation for future planetary landing systems.',
     sourceUrl: 'https://mars.nasa.gov/mars2020/timeline/landing/',
     attribution: 'NASA JPL Engineering Directorate',
     factType: 'INTERPRETATION'
@@ -163,18 +163,18 @@ export const perseveranceEDL: MissionData = {
   lastSignal: {
     lastCommDate: '2021-02-18',
     lastActivity: 'Transmitting real-time MEDLI2 aero-thermal telemetry and camera video while lowering Perseverance via 6-meter nylon tethers.',
-    endingEvent: 'Rover touchdown detected; skycrane tethers cut; descent stage executed controlled flyaway maneuver to impact ~700m NW.',
+    endingEvent: 'Rover touchdown detected; skycrane tethers cut; descent stage executed planned final flyaway maneuver to impact ~700m NW.',
     finalLocation: {
       latitude: 18.449,
       longitude: 77.443,
       regionName: 'Jezero Crater Floor',
-      featureName: 'Descent Stage Impact Zone',
+      featureName: 'Descent Stage Impact Zone (Separate from Rover Location)',
       celestialBody: 'Mars',
       referenceFrame: 'IAU Mars 2000',
       sourceUrl: 'https://photojournal.jpl.nasa.gov/catalog/PIA24420',
       attribution: 'NASA JPL / MRO HiRISE'
     },
-    causeOfSilence: 'Intentional separation post-touchdown; hydrazine fuel spent during flyaway impact.',
+    causeOfSilence: 'Planned separation post-touchdown; hydrazine fuel spent during controlled flyaway impact.',
     scientificLegacySummary: 'Recorded first HD video/audio of supersonic parachute deployment in thin Martian atmosphere.'
   },
 
@@ -206,7 +206,7 @@ export const perseveranceEDL: MissionData = {
     {
       id: 'edl-4',
       date: '2021-02-18',
-      title: 'Controlled Flyaway Crash (~700m NW)',
+      title: 'Planned Controlled Flyaway Impact (~700m NW)',
       description: 'Descent stage flew away to impact site as planned.',
       category: 'Mission End',
       nasaRefUrl: 'https://photojournal.jpl.nasa.gov/catalog/PIA24420'

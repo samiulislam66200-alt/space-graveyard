@@ -1,7 +1,7 @@
 'use client';
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { ExternalLink, HelpCircle, Navigation } from 'lucide-react';
+import { ExternalLink, HelpCircle } from 'lucide-react';
 
 const distanceData = [
   {
@@ -16,7 +16,7 @@ const distanceData = [
     name: 'Apollo 15 LRV (LRV-002)',
     body: 'Moon',
     goalKm: 10.0, // 10 km baseline radius limit
-    actualKm: 27.76,
+    actualKm: 27.8,
     multiplier: '2.78x',
     source: 'https://history.nasa.gov/alsj/a15/a15.html'
   }
@@ -75,7 +75,7 @@ export default function TraverseDistanceChart() {
         <div className="p-3 bg-slate-950 rounded border border-space-border/60">
           <div className="text-amber-400 font-bold uppercase text-[10px]">WHAT YOU ARE SEEING</div>
           <p className="text-slate-300 font-sans text-xs mt-1">
-            Distance driven in kilometers: Opportunity (45.16 km on Mars) and Apollo 15 LRV (27.76 km on Moon).
+            Distance driven in kilometers: Opportunity (45.16 km on Mars) and Apollo 15 LRV (27.8 km on Moon).
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function TraverseDistanceChart() {
 
         <div className="p-3 bg-slate-950 rounded border border-space-border/60 flex flex-col justify-between">
           <div>
-            <div className="text-emerald-400 font-bold uppercase text-[10px]">VERIFIED NASA SOURCE</div>
+            <div className="text-emerald-400 font-bold uppercase text-[10px]">NASA ARCHIVAL DATA SOURCE</div>
             <div className="text-slate-400 text-xs font-sans mt-1">NASA JPL MER &amp; Apollo Surface Journal</div>
           </div>
           <a

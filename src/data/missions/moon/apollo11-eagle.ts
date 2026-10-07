@@ -33,14 +33,14 @@ export const apollo11Eagle: MissionData = {
   },
 
   missionObjective: {
-    value: 'Perform the first crewed lunar landing, deploy the Early Apollo Scientific Experiments Package (EASEP), gather lunar surface samples, and serve as the launchpad for the Ascent Stage.',
+    value: 'Perform the first crewed lunar landing, serve as the descent and landing platform for Lunar Module Eagle, enable the deployment of Apollo 11 surface scientific experiments (EASEP) and returned lunar sample collection, and serve as the launch platform for the Ascent Stage.',
     sourceUrl: 'https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html',
     attribution: 'NASA Headquarters',
     factType: 'FACT'
   },
 
   hardwareDescription: {
-    value: 'The Descent Stage (LM-5) was an octagonal aluminum alloy structure supported by four truss-type landing legs. It housed the Descent Propulsion System (DPS) rocket engine, hypergolic propellant tanks, water and oxygen storage, and Modular Equipment Stowage Assemblies (MESA).',
+    value: 'The Descent Stage (LM-5) served as the landing platform and launchpad for Lunar Module Eagle. An octagonal aluminum alloy structure supported by four truss-type landing legs, it housed the Descent Propulsion System (DPS) rocket engine, hypergolic propellant tanks, water and oxygen storage, and Modular Equipment Stowage Assemblies (MESA).',
     sourceUrl: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C',
     attribution: 'NASA NSSDC Spacecraft Details',
     factType: 'FACT'
@@ -81,7 +81,7 @@ export const apollo11Eagle: MissionData = {
     {
       name: 'Passive Seismic Experiment Package',
       acronym: 'PSEP',
-      description: 'Self-contained solar-powered seismometer package deployed ~16 meters from the LM.',
+      description: 'Self-contained solar-powered seismometer package deployed separately on the lunar regolith ~16 meters from Eagle during Apollo 11 EVA.',
       scientificPurpose: 'Measure natural moonquakes, meteoroid impacts, and free oscillations of the Moon.',
       whatItMeasured: 'Seismic wave velocity and crustal thickness.',
       statusAtMissionEnd: 'Operated for 21 days until internal electronics overheated during lunar noon.',
@@ -91,7 +91,7 @@ export const apollo11Eagle: MissionData = {
     {
       name: 'Laser Ranging Retroreflector',
       acronym: 'LRRR',
-      description: 'Passive array of 100 fused silica corner-cube reflectors mounted in an aluminum panel.',
+      description: 'Passive array of 100 fused silica corner-cube reflectors mounted in an aluminum panel, deployed separately on the lunar surface during the Apollo 11 EVA.',
       scientificPurpose: 'Reflect Earth-based laser pulses to precisely measure Earth-Moon distance.',
       whatItMeasured: 'Earth-Moon orbital distance, lunar librations, and lunar recession rate.',
       statusAtMissionEnd: 'Operational indefinitely (requires no power). Still actively pinged today.',
@@ -101,7 +101,7 @@ export const apollo11Eagle: MissionData = {
   ],
 
   scientificPurpose: {
-    value: 'Study lunar surface composition, measure lunar seismic activity, determine lunar soil mechanical properties, and measure Earth-Moon geodetic distance.',
+    value: 'Apollo 11 surface EVA science studied lunar surface composition, measured lunar seismic activity, determined lunar soil mechanical properties, and placed the Laser Ranging Retroreflector.',
     sourceUrl: 'https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html',
     attribution: 'NASA Science Mission Directorate',
     factType: 'FACT'
@@ -110,7 +110,7 @@ export const apollo11Eagle: MissionData = {
   discoveries: [
     {
       title: 'Titanium-Rich Lunar Mare Basalt Composition',
-      description: 'Returned samples (21.55 kg) proved lunar maria consist of ancient basaltic lava flows rich in titanium, formed 3.6 to 3.9 billion years ago.',
+      description: 'Returned lunar samples (21.5 kg) collected during Apollo 11 surface EVA proved lunar maria consist of ancient basaltic lava flows rich in titanium, formed 3.6 to 3.9 billion years ago.',
       scientificSignificance: 'Proved the Moon experienced widespread volcanic activity and differentiation.',
       sourceUrl: 'https://curator.jsc.nasa.gov/lunar/samples/apollo11/',
       attribution: 'NASA Johnson Space Center Astromaterials Curation',
@@ -118,7 +118,7 @@ export const apollo11Eagle: MissionData = {
     },
     {
       title: 'Centimeter-Precision Earth-Moon Distance Measurements',
-      description: 'The LRRR retroreflector enabled ground observatories to measure the Moon distance to within centimeters.',
+      description: 'The separately deployed LRRR retroreflector enabled ground observatories to measure the Moon distance to within centimeters.',
       scientificSignificance: 'Discovered the Moon is receding from Earth at 3.8 cm per year.',
       sourceUrl: 'https://tmpls.jpl.nasa.gov/',
       attribution: 'NASA JPL Laser Ranging Group',
@@ -141,8 +141,8 @@ export const apollo11Eagle: MissionData = {
   },
 
   landingLocation: {
-    latitude: 0.67408,
-    longitude: 23.47297,
+    latitude: 0.67409,
+    longitude: 23.47298,
     regionName: 'Mare Tranquillitatis (Sea of Tranquility)',
     featureName: 'Statio Tranquillitatis (Tranquility Base)',
     celestialBody: 'Moon',
@@ -152,8 +152,8 @@ export const apollo11Eagle: MissionData = {
   },
 
   finalLastKnownLocation: {
-    latitude: 0.67408,
-    longitude: 23.47297,
+    latitude: 0.67409,
+    longitude: 23.47298,
     regionName: 'Mare Tranquillitatis (Sea of Tranquility)',
     featureName: 'Statio Tranquillitatis',
     celestialBody: 'Moon',
@@ -172,14 +172,14 @@ export const apollo11Eagle: MissionData = {
   },
 
   silenceCauseDetails: {
-    value: 'Batteries were fully exhausted shortly after the crew launched in the Ascent Stage. The hardware remains in place as an undisturbed archaeological site.',
+    value: 'Batteries were fully exhausted shortly after the crew launched in the Ascent Stage. The descent stage hardware remains in place as an undisturbed archaeological landing platform.',
     sourceUrl: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C',
     attribution: 'NASA NSSDC',
     factType: 'FACT'
   },
 
   scientificLegacy: {
-    value: 'Established human planetary exploration capability. The LRRR payload continues to yield fundamental gravity and relativity measurements over 55 years later.',
+    value: 'Established human planetary landing capability. Apollo 11 surface experiments and returned samples provided fundamental insights into lunar history, while the separately deployed LRRR continues to yield gravity measurements over 55 years later.',
     sourceUrl: 'https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html',
     attribution: 'NASA Headquarters',
     factType: 'INTERPRETATION'
@@ -188,10 +188,10 @@ export const apollo11Eagle: MissionData = {
   lastSignal: {
     lastCommDate: '1969-07-21',
     lastActivity: 'Descent Propulsion System engine performed soft touchdown at Tranquility Base; Ascent Stage launched July 21, 1969.',
-    endingEvent: 'Descent Stage remained on lunar surface as permanent launchpad for Ascent Stage.',
+    endingEvent: 'Descent Stage remained on lunar surface as permanent launch platform for Ascent Stage departure.',
     finalLocation: {
-      latitude: 0.67408,
-      longitude: 23.47297,
+      latitude: 0.67409,
+      longitude: 23.47298,
       regionName: 'Mare Tranquillitatis',
       featureName: 'Tranquility Base',
       celestialBody: 'Moon',
@@ -199,8 +199,8 @@ export const apollo11Eagle: MissionData = {
       sourceUrl: 'https://www.lroc.asu.edu/posts/273',
       attribution: 'LROC / ASU'
     },
-    causeOfSilence: 'Batteries depleted after Ascent Stage departure; hardware preserved as historic site.',
-    scientificLegacySummary: 'LRRR retroreflector continues to reflect laser pulses from Earth after 55+ years.'
+    causeOfSilence: 'Batteries depleted after Ascent Stage departure; descent platform preserved as historic site.',
+    scientificLegacySummary: 'Apollo 11 surface EVA delivered 21.5 kg of lunar samples and deployed LRRR laser reflector.'
   },
 
   timeline: [
@@ -224,7 +224,7 @@ export const apollo11Eagle: MissionData = {
       id: 'a11-3',
       date: '1969-07-21',
       title: 'First Step & EASEP Deployment',
-      description: 'Neil Armstrong and Buzz Aldrin deployed PSEP seismometer and LRRR laser reflector.',
+      description: 'Neil Armstrong and Buzz Aldrin deployed PSEP seismometer and LRRR laser reflector on the lunar regolith.',
       category: 'Discovery',
       nasaRefUrl: 'https://history.nasa.gov/alsj/a11/a11.html'
     },
@@ -232,7 +232,7 @@ export const apollo11Eagle: MissionData = {
       id: 'a11-4',
       date: '1969-07-21',
       title: 'Ascent Stage Liftoff / Descent Stage Separation',
-      description: 'Descent Stage remained on surface as launchpad for Ascent Stage.',
+      description: 'Descent Stage remained on surface as launch platform for Ascent Stage.',
       category: 'Last Signal',
       nasaRefUrl: 'https://history.nasa.gov/alsj/a11/a11.html'
     }

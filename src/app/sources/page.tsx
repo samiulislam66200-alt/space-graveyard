@@ -1,6 +1,6 @@
 import { ALL_MISSIONS } from '../../data/missions';
 import MissionSourcesCard from '../../components/sources/MissionSourcesCard';
-import { FileText, ShieldCheck, Database, Image as ImageIcon, Globe, BookOpen } from 'lucide-react';
+import { FileText, Database, Image as ImageIcon, Globe, BookOpen } from 'lucide-react';
 
 export default function SourcesPage() {
   return (
@@ -17,7 +17,7 @@ export default function SourcesPage() {
         </h1>
 
         <p className="text-slate-300 font-sans text-sm sm:text-base max-w-3xl leading-relaxed">
-          Every factual claim, planetary coordinate, hardware dimension, and telemetry event across SPACE GRAVEYARD is traceable directly to verified NASA, JPL, and Planetary Data System (PDS) archives. Zero placeholder or fake URLs are used.
+          NASA-sourced mission data and archival references, with uncertainty and interpretation identified where applicable. Zero placeholder or fake URLs are used.
         </p>
 
         {/* Legend of Data Types */}

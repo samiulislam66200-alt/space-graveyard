@@ -109,32 +109,32 @@ export const apollo15LRV: MissionData = {
   },
 
   distanceTraveledKm: {
-    value: 27.76,
+    value: 27.8,
     sourceUrl: 'https://history.nasa.gov/alsj/a15/a15.html',
     attribution: 'NASA Apollo Surface Journal Data',
     factType: 'DATA'
   },
 
   landingLocation: {
-    latitude: 26.1322,
-    longitude: 3.6339,
+    latitude: 26.13110,
+    longitude: 3.63972,
     regionName: 'Hadley-Apennine Region',
-    featureName: 'Hadley Base (LM Falcon Site)',
+    featureName: 'Hadley Base (LRV Final Parking Site approx. 26.13110° N, 3.63972° E)',
     celestialBody: 'Moon',
     referenceFrame: 'Lunar Planetographic (IAU/IAG 2000)',
     sourceUrl: 'https://www.lroc.asu.edu/posts/505',
-    attribution: 'LROC / Arizona State University'
+    attribution: 'LROC Orbital Mapping (Approximate/Regional LRV Coordinates)'
   },
 
   finalLastKnownLocation: {
-    latitude: 26.1322,
-    longitude: 3.6339,
+    latitude: 26.13110,
+    longitude: 3.63972,
     regionName: 'Hadley-Apennine Region',
-    featureName: 'Hadley Base (Parked ~96m East of Falcon)',
+    featureName: 'Hadley Base (LRV Parked ~96m East of LM Falcon, approx. 26.13110° N, 3.63972° E)',
     celestialBody: 'Moon',
     referenceFrame: 'Lunar Planetographic (IAU/IAG 2000)',
     sourceUrl: 'https://www.lroc.asu.edu/posts/505',
-    attribution: 'LROC High Resolution Imaging'
+    attribution: 'LROC High Resolution Imaging (Approximate LRV Parking Site)'
   },
 
   routeData: null,
@@ -162,20 +162,20 @@ export const apollo15LRV: MissionData = {
 
   lastSignal: {
     lastCommDate: '1971-08-02',
-    lastActivity: 'Positioned ~96m East of LM Falcon to film ascent stage liftoff via remotely controlled GCTA TV camera.',
+    lastActivity: 'Positioned ~96m East of LM Falcon (approx. 26.13110° N, 3.63972° E) to film ascent stage liftoff via remotely controlled GCTA TV camera.',
     endingEvent: 'Filmed Apollo 15 LM Falcon liftoff live on television; camera operated until internal battery exhaustion.',
     finalLocation: {
-      latitude: 26.1322,
-      longitude: 3.6339,
+      latitude: 26.13110,
+      longitude: 3.63972,
       regionName: 'Hadley-Apennine Region',
-      featureName: 'Hadley Base (Parked East of LM Falcon)',
+      featureName: 'Hadley Base (Parked East of LM Falcon, approx. 26.13110° N, 3.63972° E)',
       celestialBody: 'Moon',
       referenceFrame: 'Lunar Planetographic (IAU/IAG 2000)',
       sourceUrl: 'https://www.lroc.asu.edu/posts/505',
-      attribution: 'LROC / ASU'
+      attribution: 'LROC / ASU (Approximate LRV Parking Site)'
     },
     causeOfSilence: 'Silver-Zinc battery depletion following post-liftoff TV transmission.',
-    scientificLegacySummary: 'Pioneered crewed off-world vehicular mobility and sample collection across 27.76 km.'
+    scientificLegacySummary: 'Pioneered crewed off-world vehicular mobility and sample collection across 27.8 km.'
   },
 
   timeline: [
@@ -207,7 +207,7 @@ export const apollo15LRV: MissionData = {
       id: 'a15-4',
       date: '1971-08-02',
       title: 'Parked to Film Liftoff / Final TV Transmission',
-      description: 'Parked ~96m East of LM Falcon; broadcasted ascent liftoff.',
+      description: 'Parked ~96m East of LM Falcon (approx. 26.13110° N, 3.63972° E); broadcasted ascent liftoff.',
       category: 'Last Signal',
       nasaRefUrl: 'https://history.nasa.gov/alsj/a15/'
     }

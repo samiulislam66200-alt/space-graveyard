@@ -5,36 +5,52 @@ import { ExternalLink, HelpCircle, Layers } from 'lucide-react';
 
 const payloadData = [
   {
-    category: 'Rovers (Opportunity & LRV)',
-    imaging: 4,
-    spectroscopy: 3,
+    category: 'Opportunity Rover',
+    imaging: 3, // Pancam, Navcam, Hazcam
+    spectroscopy: 3, // Mini-TES, Mössbauer, APXS
     seismology: 0,
-    soilMechanics: 2,
-    atmospheric: 2
+    soilMechanics: 1, // RAT (Rock Abrasion Tool)
+    atmospheric: 1, // Pancam tau solar filter
   },
   {
-    category: 'Landers (InSight & Surveyor 3)',
-    imaging: 2,
-    spectroscopy: 0,
-    seismology: 2,
-    soilMechanics: 2,
-    atmospheric: 2
-  },
-  {
-    category: 'EDL Gear (Perseverance Stack)',
-    imaging: 3,
+    category: 'Apollo 15 LRV',
+    imaging: 1, // Ground-Controlled TV Camera (GCTA)
     spectroscopy: 0,
     seismology: 0,
     soilMechanics: 0,
-    atmospheric: 2
+    atmospheric: 0,
   },
   {
-    category: 'Apollo Descent Stages & Packages',
-    imaging: 1,
+    category: 'InSight Lander',
+    imaging: 2, // IDC & ICC cameras
     spectroscopy: 0,
-    seismology: 1,
-    soilMechanics: 1,
-    atmospheric: 1
+    seismology: 1, // SEIS 6-axis seismometer
+    soilMechanics: 1, // HP3 mole thermal probe
+    atmospheric: 1, // APSS weather station
+  },
+  {
+    category: 'Perseverance EDL Stack',
+    imaging: 7, // EDL camera suite (parachute, skycrane, rover down/up)
+    spectroscopy: 0,
+    seismology: 0,
+    soilMechanics: 0,
+    atmospheric: 1, // MEDLI2 heat flux & pressure sensors
+  },
+  {
+    category: 'Apollo 11 Eagle',
+    imaging: 1, // Maurer 16mm motion picture camera
+    spectroscopy: 0,
+    seismology: 1, // PSEP seismometer
+    soilMechanics: 1, // Solar Wind Composition foil / Soil penetrometer
+    atmospheric: 0,
+  },
+  {
+    category: 'Surveyor 3',
+    imaging: 1, // Slow-Scan TV camera
+    spectroscopy: 0,
+    seismology: 0,
+    soilMechanics: 1, // Soil Mechanics Surface Sampler scoop
+    atmospheric: 0,
   }
 ];
 
@@ -108,7 +124,7 @@ export default function InstrumentPayloadChart() {
 
         <div className="p-3 bg-slate-950 rounded border border-space-border/60 flex flex-col justify-between">
           <div>
-            <div className="text-emerald-400 font-bold uppercase text-[10px]">VERIFIED NASA SOURCE</div>
+            <div className="text-emerald-400 font-bold uppercase text-[10px]">NASA ARCHIVAL DATA SOURCE</div>
             <div className="text-slate-400 text-xs font-sans mt-1">NSSDCA Master Catalog Instrument Files</div>
           </div>
           <a

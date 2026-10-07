@@ -18,14 +18,14 @@ export default function ChallengeContextBanner() {
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
-            This educational platform was created to transform archival NASA mission telemetry and planetary coordinates into an accessible, deeply respectful storytelling experience. Every hardware location is verified through official NASA Planetary Data System (PDS) datasets and high-resolution orbital imaging.
+            This educational platform was created to transform archival NASA mission telemetry and planetary coordinates into an accessible, deeply respectful storytelling experience. Hardware locations are sourced through official NASA Planetary Data System (PDS) datasets and high-resolution orbital imaging.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 font-mono text-xs">
             <div className="p-4 rounded-lg bg-slate-900/80 border border-space-border/60 space-y-1">
-              <div className="text-amber-400 font-bold uppercase">Zero Invented Facts</div>
+              <div className="text-amber-400 font-bold uppercase">NASA-Sourced Data</div>
               <div className="text-slate-400 font-sans text-xs">
-                All coordinates, mission dates, instrument specs, and distances are 100% sourced from official NASA archives.
+                All coordinates, mission dates, instrument specs, and distances are sourced from official NASA archives.
               </div>
             </div>
 

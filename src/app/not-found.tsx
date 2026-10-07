@@ -13,7 +13,7 @@ export default function NotFound() {
           404 — UNMAPPED SPACE COORDINATE
         </div>
         <p className="text-slate-300 font-sans text-xs sm:text-sm leading-relaxed">
-          The requested trajectory or mission record does not exist in our verified NASA hardware catalog.
+          The requested trajectory or mission record does not exist in our NASA hardware catalog.
         </p>
       </div>
 

@@ -19,7 +19,7 @@ export default function FeaturedHardwareGrid() {
               Discarded Hardware of Moon &amp; Mars
             </h2>
             <p className="text-slate-400 text-sm sm:text-base font-sans max-w-xl">
-              Inspect real verified NASA mission hardware resting on alien soil.
+              Inspect archival NASA mission hardware resting on alien soil.
             </p>
           </div>
 
@@ -33,117 +33,86 @@ export default function FeaturedHardwareGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {ALL_MISSIONS.map((mission, index) => {
+          {ALL_MISSIONS.map((mission, idx) => {
             const isMoon = mission.destination === 'Moon';
-            const primaryDiscovery = mission.discoveries[0];
-            const heroImg = mission.images[0];
+            const cardImg = mission.images && mission.images.length > 0 ? mission.images[0] : null;
 
             return (
-              <motion.article
+              <motion.div
                 key={mission.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="bg-[#0b101d] border border-space-border/80 rounded-xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all group shadow-lg"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-[#0b101d] border border-space-border/80 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all flex flex-col justify-between group"
               >
                 <div>
-                  {/* Card Header Image / Placeholder */}
-                  <div className="relative h-48 w-full bg-slate-900 overflow-hidden">
-                    {heroImg ? (
+                  {/* Card Image Banner */}
+                  <div className="relative h-48 w-full bg-slate-950 overflow-hidden">
+                    {cardImg ? (
                       <Image
-                        src={heroImg.url}
-                        alt={heroImg.title || mission.missionName}
+                        src={cardImg.url}
+                        alt={cardImg.title || mission.missionName}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
                         unoptimized
                       />
                     ) : (
-                      <div className="absolute inset-0 flex items-center justify-center font-mono text-xs text-slate-400">
-                        NASA ARCHIVAL IMAGE
+                      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 flex items-center justify-center font-mono text-xs text-slate-400">
+                        NASA IMAGE ARCHIVE
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b101d] via-transparent to-black/40" />
 
-                    {/* Celestial Body Badge */}
-                    <div className="absolute top-3 left-3 flex gap-2">
-                      <span className={`font-mono text-[10px] uppercase font-bold px-2.5 py-1 rounded border shadow-md ${
-                        isMoon 
-                          ? 'bg-slate-900/90 text-slate-200 border-slate-600' 
-                          : 'bg-rose-950/90 text-rose-300 border-rose-800'
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b101d] via-transparent to-transparent" />
+
+                    <div className="absolute top-3 left-3 flex items-center gap-2">
+                      <span className={`px-2.5 py-0.5 rounded-full font-mono text-[10px] font-bold uppercase tracking-wider ${
+                        isMoon ? 'bg-amber-950/90 text-amber-300 border border-amber-800' : 'bg-rose-950/90 text-rose-300 border border-rose-800'
                       }`}>
                         {mission.destination}
                       </span>
-                      <span className="font-mono text-[10px] uppercase font-semibold px-2.5 py-1 rounded bg-slate-900/90 text-amber-400 border border-amber-500/30">
-                        {mission.hardwareType}
-                      </span>
-                    </div>
-
-                    {/* Status Badge */}
-                    <div className="absolute top-3 right-3">
-                      <span className={`font-mono text-[10px] uppercase font-semibold px-2 py-0.5 rounded flex items-center gap-1 border ${
-                        mission.currentStatus === 'Silent'
-                          ? 'bg-amber-950/90 text-amber-400 border-amber-700'
-                          : 'bg-slate-950/90 text-slate-400 border-slate-700'
-                      }`}>
-                        <ShieldAlert className="w-3 h-3" />
-                        {mission.currentStatus}
-                      </span>
                     </div>
                   </div>
 
-                  {/* Card Body */}
+                  {/* Body Content */}
                   <div className="p-6 space-y-4">
-                    <div>
-                      <h3 className="font-mono text-lg font-bold text-slate-100 group-hover:text-amber-400 transition-colors">
+                    <div className="space-y-1">
+                      <div className="font-mono text-[11px] text-cyan-400 font-bold uppercase">
+                        {mission.hardwareType}
+                      </div>
+                      <h3 className="font-mono text-xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors">
                         {mission.missionName}
                       </h3>
-                      <p className="text-xs text-slate-400 font-mono mt-1 flex items-center gap-1">
-                        <MapPin className="w-3 h-3 text-cyan-400 shrink-0" />
-                        {mission.landingLocation.regionName} ({mission.landingLocation.latitude.toFixed(2)}°, {mission.landingLocation.longitude.toFixed(2)}°)
-                      </p>
                     </div>
 
-                    {/* Stats metrics */}
-                    <div className="grid grid-cols-2 gap-2 p-3 bg-slate-950/60 rounded border border-space-border/40 font-mono text-xs">
+                    <p className="text-slate-400 text-xs font-sans leading-relaxed line-clamp-2">
+                      {mission.missionObjective.value}
+                    </p>
+
+                    <div className="pt-2 grid grid-cols-2 gap-2 font-mono text-[11px] border-t border-space-border/40">
                       <div>
-                        <div className="text-[10px] text-slate-400 uppercase">Duration</div>
-                        <div className="text-slate-200 font-semibold">{mission.missionDurationDays.value} {isMoon ? 'Days' : 'Sols'}</div>
+                        <span className="text-slate-400 block text-[10px]">LANDED</span>
+                        <span className="text-slate-200 font-bold">{mission.arrivalLandingDate.value}</span>
                       </div>
                       <div>
-                        <div className="text-[10px] text-slate-400 uppercase">Distance</div>
-                        <div className="text-slate-200 font-semibold">
-                          {mission.distanceTraveledKm?.value ? `${mission.distanceTraveledKm.value} km` : 'Stationary'}
-                        </div>
+                        <span className="text-slate-400 block text-[10px]">STATUS</span>
+                        <span className="text-rose-400 font-bold">{mission.currentStatus}</span>
                       </div>
                     </div>
-
-                    {/* Key Discovery */}
-                    {primaryDiscovery && (
-                      <div className="space-y-1">
-                        <div className="font-mono text-[11px] text-amber-400 font-semibold flex items-center gap-1">
-                          <Sparkles className="w-3 h-3 text-amber-400" />
-                          <span>Key Discovery:</span>
-                        </div>
-                        <p className="text-xs text-slate-300 font-sans line-clamp-2 leading-relaxed">
-                          {primaryDiscovery.title} — {primaryDiscovery.description}
-                        </p>
-                      </div>
-                    )}
                   </div>
                 </div>
 
-                {/* Footer Link */}
-                <div className="px-6 py-4 bg-slate-900/50 border-t border-space-border/40">
+                {/* Footer Action */}
+                <div className="p-6 pt-0">
                   <Link
                     href={`/mission/${mission.id}`}
-                    className="w-full inline-flex items-center justify-between font-mono text-xs text-slate-300 group-hover:text-amber-400 uppercase tracking-wider font-semibold"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 border border-space-border/80 text-slate-200 font-mono text-xs font-bold uppercase hover:bg-slate-800 hover:text-amber-400 transition-all"
                   >
-                    <span>Read Machine Story</span>
-                    <Navigation className="w-3.5 h-3.5 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                    <span>Read Mission Story</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-amber-400" />
                   </Link>
                 </div>
-              </motion.article>
+              </motion.div>
             );
           })}
         </div>

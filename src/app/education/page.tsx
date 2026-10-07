@@ -24,7 +24,7 @@ export default function EducationPage() {
         <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-2">
           <span className="flex items-center gap-1.5 text-cyan-400">
             <ShieldCheck className="w-4 h-4 text-cyan-400" />
-            100% Verified NASA Facts &amp; Physics
+            NASA-Sourced Facts &amp; Physics
           </span>
           <span className="flex items-center gap-1.5 text-amber-400">
             <Sparkles className="w-4 h-4 text-amber-400" />
@@ -43,31 +43,38 @@ export default function EducationPage() {
           <DidYouKnowCard
             title="Zero Power Required for 55+ Years"
             fact="The Apollo 11 Laser Ranging Retroreflector (LRRR) placed on the Moon in 1969 uses zero electrical power and has no batteries. It consists of 100 glass corner cubes that still bounce laser beams back to Earth observatories today!"
-            analogy="Like a bicycle reflector on your bike wheel, but engineered with fused-silica glass that survives extreme space vacuum and radiation."
-            nasaRef="NASA JPL Laser Ranging Group"
+            analogy="Like a retroreflective cat-eye on a bicycle, but built from precision glass corner-cubes that shine back lasers 384,000 km across space."
+            nasaRef="NASA NSSDC Experiment Record 1969-059C-02"
           />
 
           <DidYouKnowCard
-            title="Driving 75 Times Farther Than Planned"
-            fact="Opportunity Rover was designed to survive 90 Sols (90 Martian days) and drive 600 meters. Instead, it operated for 5,352 Sols and drove 45.16 kilometers across Mars!"
-            analogy="Imagine buying a car built to drive from home to the grocery store, and ending up driving across the entire state of Rhode Island!"
-            nasaRef="NASA JPL MER Telemetry Archive"
+            title="75x Beyond Planned Design Goal"
+            fact="Opportunity Rover was designed to survive 90 Sols (Martian days) and drive 600 meters. It operated for 5,352 Sols and drove 45.16 kilometers across Mars!"
+            analogy="Imagine buying a car built for a 100-mile trip, and driving it around the world 75 times instead!"
+            nasaRef="NASA JPL MER Mission Overview"
           />
 
           <DidYouKnowCard
-            title="Astronauts Visiting Discarded Hardware"
-            fact="On November 19, 1969, Apollo 12 astronauts Pete Conrad and Alan Bean landed LM Intrepid 180 meters from Surveyor 3 (which landed in 1967) and physically unbolted its TV camera to return it to Earth."
-            analogy="The only time in human history that astronauts visited a spacecraft left on another world!"
-            nasaRef="NASA Apollo 12 Surface Journal"
+            title="Revealing the Interior of Mars"
+            fact="InSight recorded over 1,300 marsquakes on Elysium Planitia, providing new seismic constraints on Mars crust thickness (20–40 km) and its liquid metallic core structure!"
+            analogy="Just like an X-ray sees inside your body, seismic sound waves from marsquakes reveal the inner layers of Mars."
+            nasaRef="NASA JPL InSight Science Results"
           />
         </div>
       </div>
 
-      {/* 2. Interactive Instrument Physics Explainer */}
-      <InstrumentExplainer />
+      {/* 2. Interactive Instrument Teardowns */}
+      <div className="space-y-6">
+        <InstrumentExplainer />
+      </div>
 
-      {/* 3. Interactive Space Apps Quiz */}
-      <MissionQuizModal />
+      {/* 3. Interactive Quiz Modal Launcher */}
+      <div className="space-y-6">
+        <h2 className="font-mono text-2xl font-bold uppercase text-slate-100">
+          NASA Science &amp; Hardware Quiz
+        </h2>
+        <MissionQuizModal />
+      </div>
     </div>
   );
 }

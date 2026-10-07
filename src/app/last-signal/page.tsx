@@ -18,7 +18,7 @@ export default function LastSignalPage() {
         </h1>
 
         <p className="text-slate-300 font-sans text-sm sm:text-base leading-relaxed">
-          Visualizing the final phase, final communication date, mission-ending events, and permanent resting locations of NASA hardware on the Moon and Mars. Zero fabricated drama—100% verified archival telemetry.
+          Visualizing the final phase, final communication date, mission-ending events, and permanent resting locations of NASA hardware on the Moon and Mars. Zero fabricated drama—built on verified NASA archival telemetry.
         </p>
       </div>
 

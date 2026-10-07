@@ -20,13 +20,13 @@ export const surveyor3: MissionData = {
     factType: 'FACT'
   },
   lastCommunicationDate: {
-    value: '1967-05-03',
+    value: '1967-05-04',
     sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
     attribution: 'NASA SP-184 Surveyor Project Report',
     factType: 'FACT'
   },
   missionEndDate: {
-    value: '1967-05-03',
+    value: '1967-05-04',
     sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
     attribution: 'NASA Project Report',
     factType: 'FACT'
@@ -73,7 +73,7 @@ export const surveyor3: MissionData = {
   instruments: [
     {
       name: 'Surveyor Slow-Scan TV Camera',
-      description: 'Vidicon tube camera with variable focus and 25-degree field of view.',
+      description: 'Vidicon tube camera that returned 6,326 television images of the lunar surface.',
       scientificPurpose: 'Assess lunar surface topography, particle size distribution, and landing footpad impressions.',
       whatItMeasured: 'Visible light reflectance and surface texture.',
       statusAtMissionEnd: 'Operated through first lunar day; returned to Earth by Apollo 12 crew in 1969.',
@@ -83,7 +83,7 @@ export const surveyor3: MissionData = {
   ],
 
   scientificPurpose: {
-    value: 'Verify that lunar surface soil could support the weight of the Apollo Lunar Module without collapsing or sinking.',
+    value: 'Verify that lunar surface soil could support the weight of the Apollo Lunar Module.',
     sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
     attribution: 'NASA Science Directorate',
     factType: 'FACT'
@@ -92,8 +92,8 @@ export const surveyor3: MissionData = {
   discoveries: [
     {
       title: 'Confirmed Lunar Soil Bearing Capacity for Apollo Landings',
-      description: 'Surveyor 3 trenching experiments demonstrated lunar regolith possesses cohesive bearing strength of ~0.7 N/cm², sufficient for heavy human landers.',
-      scientificSignificance: 'Eliminated fears that Apollo landers would sink into deep fluffy dust.',
+      description: 'Surveyor 3 trenching experiments demonstrated lunar regolith possesses cohesive bearing strength of about 0.7 kgf/cm² (about 69 kPa), indicating the surface could support heavy spacecraft.',
+      scientificSignificance: 'The experiments supported the conclusion that the lunar surface could support an Apollo Lunar Module.',
       sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
       attribution: 'NASA SP-184 Analysis Team',
       factType: 'FACT'
@@ -109,7 +109,7 @@ export const surveyor3: MissionData = {
   ],
 
   missionDurationDays: {
-    value: 13,
+    value: 14,
     sourceUrl: 'https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A',
     attribution: 'NASA NSSDC',
     factType: 'DATA'
@@ -126,7 +126,7 @@ export const surveyor3: MissionData = {
     latitude: -3.01562,
     longitude: -23.41855,
     regionName: 'Oceanus Procellarum (Ocean of Storms)',
-    featureName: 'Surveyor Crater',
+    featureName: 'Surveyor Crater (approx. 3.015° S, 23.418° W)',
     celestialBody: 'Moon',
     referenceFrame: 'Lunar Planetographic (IAU/IAG 2000)',
     sourceUrl: 'https://www.lroc.asu.edu/posts/141',
@@ -137,7 +137,7 @@ export const surveyor3: MissionData = {
     latitude: -3.01562,
     longitude: -23.41855,
     regionName: 'Oceanus Procellarum',
-    featureName: 'Surveyor Crater (180m from Apollo 12 site)',
+    featureName: 'Surveyor Crater (180m from Apollo 12 site, approx. 3.015° S, 23.418° W)',
     celestialBody: 'Moon',
     referenceFrame: 'Lunar Planetographic (IAU/IAG 2000)',
     sourceUrl: 'https://www.lroc.asu.edu/posts/141',
@@ -147,14 +147,14 @@ export const surveyor3: MissionData = {
   routeData: null,
 
   missionEndReason: {
-    value: 'Electronics frozen during the 14-day extreme cold (-150°C) of the lunar night. Batteries did not recover during second lunar day.',
+    value: 'Electronics reached extreme low temperatures during the 14-day lunar night (-150°C). Communications ceased on May 4, 1967.',
     sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
     attribution: 'NASA Project Report',
     factType: 'FACT'
   },
 
   silenceCauseDetails: {
-    value: 'Extreme thermal contraction during lunar night cracked internal soldered circuit connections.',
+    value: 'Communications ceased on May 4, 1967 as the spacecraft entered the cold lunar night.',
     sourceUrl: 'https://history.nasa.gov/SP-184/sp184.htm',
     attribution: 'NASA JPL Post-Mission Analysis',
     factType: 'FACT'
@@ -168,9 +168,9 @@ export const surveyor3: MissionData = {
   },
 
   lastSignal: {
-    lastCommDate: '1967-05-03',
-    lastActivity: 'Transmitted frame 6,315 showing lunar sunset across Oceanus Procellarum crater rim on May 3, 1967.',
-    endingEvent: 'Extreme 14-day lunar night froze electronics; batteries failed to recharge when solar panels re-illuminated.',
+    lastCommDate: '1967-05-04',
+    lastActivity: 'Transmitted frame 6,326 showing lunar sunset across Oceanus Procellarum crater rim on May 4, 1967.',
+    endingEvent: 'Entered 14-day lunar night; final communication on May 4, 1967.',
     finalLocation: {
       latitude: -3.01562,
       longitude: -23.41855,
@@ -181,7 +181,7 @@ export const surveyor3: MissionData = {
       sourceUrl: 'https://www.lroc.asu.edu/posts/141',
       attribution: 'LROC / ASU'
     },
-    causeOfSilence: 'Extreme thermal contraction (-150°C) cracked solder joints during 14-day lunar night.',
+    causeOfSilence: 'Entered 14-day lunar night; final communication on May 4, 1967.',
     scientificLegacySummary: 'Visited by Apollo 12 astronauts in 1969 who unbolted TV camera for Earth analysis.'
   },
 
@@ -204,9 +204,9 @@ export const surveyor3: MissionData = {
     },
     {
       id: 'sur-3',
-      date: '1967-05-03',
-      title: 'Final Sunset Photo & Thermal Freeze',
-      description: 'Transmitted 6,315th television image before lunar night.',
+      date: '1967-05-04',
+      title: 'Final Sunset Photo (6,326 Images Total) & Sunset',
+      description: 'Transmitted 6,326th television image before lunar night on May 4, 1967.',
       category: 'Last Signal',
       nasaRefUrl: 'https://history.nasa.gov/SP-184/sp184.htm'
     },
