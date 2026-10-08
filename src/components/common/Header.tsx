@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Compass, Database, GraduationCap, FileText, Satellite, Radio, BarChart2, Menu, X } from 'lucide-react';
+import { Compass, Database, GraduationCap, FileText, Satellite, Radio, BarChart2, Menu, X, Sparkles } from 'lucide-react';
 import EducationToggleBadge from '../education/EducationToggleBadge';
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
     { label: 'The Last Signal', href: '/last-signal', icon: Radio },
     { label: 'Visualizations', href: '/visualizations', icon: BarChart2 },
     { label: 'NASA Data', href: '/data-explorer', icon: Database },
-    { label: 'Education', href: '/education', icon: GraduationCap },
+    { label: 'Learn Mode', href: '/education', icon: GraduationCap, highlight: true },
     { label: 'Sources', href: '/sources', icon: FileText },
   ];
 
@@ -57,6 +57,8 @@ export default function Header() {
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.href;
+              const isHighlight = item.highlight;
+
               return (
                 <Link
                   key={item.href}
@@ -64,11 +66,13 @@ export default function Header() {
                   className={`flex items-center gap-2 px-3 py-2 rounded-md font-mono text-xs uppercase tracking-wider transition-all ${
                     isActive
                       ? 'bg-amber-500/10 text-amber-400 border border-amber-500/40'
+                      : isHighlight
+                      ? 'bg-amber-950/60 text-amber-300 border border-amber-500/40 hover:bg-amber-900/60'
                       : 'text-slate-300 hover:text-slate-100 hover:bg-slate-900/60'
                   }`}
                 >
-                  <Icon className="w-4 h-4 text-amber-500/80" />
-                  {item.label}
+                  <Icon className={`w-4 h-4 ${isHighlight ? 'text-amber-400' : 'text-amber-500/80'}`} />
+                  <span>{item.label}</span>
                 </Link>
               );
             })}

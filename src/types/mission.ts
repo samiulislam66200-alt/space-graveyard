@@ -14,7 +14,7 @@ export type HardwareCategory =
 
 export type MissionStatus = 'Abandoned' | 'Completed' | 'Silent';
 
-export type FactType = 'FACT' | 'DATA' | 'INTERPRETATION';
+export type FactType = 'FACT' | 'DATA' | 'INTERPRETATION' | 'SPECULATION';
 
 export interface NASASource {
   title: string;

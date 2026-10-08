@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MissionData } from '../../types/mission';
-import { MapPin, Calendar, ArrowRight, ShieldAlert, Zap } from 'lucide-react';
+import { MapPin, Calendar, ArrowRight, ShieldAlert, Zap, Compass, Award } from 'lucide-react';
+import ProvenanceBadge from '../common/ProvenanceBadge';
 
 interface MissionCardProps {
   mission: MissionData;
@@ -23,6 +24,7 @@ export default function MissionCard({ mission, index }: MissionCardProps) {
   };
 
   const periodStr = `${formatDateYear(mission.arrivalLandingDate.value)} – ${formatDateYear(mission.lastCommunicationDate.value || mission.missionEndDate.value)}`;
+  const keyAchievement = mission.discoveries[0]?.title || mission.scientificPurpose.value;
 
   return (
     <motion.article
@@ -50,8 +52,8 @@ export default function MissionCard({ mission, index }: MissionCardProps) {
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#0b101d] via-transparent to-black/50" />
 
-          {/* Destination Badge */}
-          <div className="absolute top-3 left-3 flex gap-2">
+          {/* Destination Badge & Hardware Category */}
+          <div className="absolute top-3 left-3 flex flex-wrap gap-2">
             <span className={`font-mono text-[10px] uppercase font-bold px-2.5 py-1 rounded border shadow-md ${
               isMoon 
                 ? 'bg-slate-900/90 text-slate-100 border-slate-600' 
@@ -81,9 +83,11 @@ export default function MissionCard({ mission, index }: MissionCardProps) {
         {/* Card Body */}
         <div className="p-6 space-y-4">
           <div>
-            <h2 className="font-mono text-xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors">
-              {mission.missionName}
-            </h2>
+            <div className="flex items-center justify-between gap-2">
+              <h2 className="font-mono text-xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors">
+                {mission.missionName}
+              </h2>
+            </div>
 
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs text-slate-400 mt-2">
               <span className="flex items-center gap-1">
@@ -97,21 +101,24 @@ export default function MissionCard({ mission, index }: MissionCardProps) {
             </div>
           </div>
 
-          {/* Scientific Purpose */}
+          {/* Why It Matters / Key Achievement */}
           <div className="space-y-1.5 p-3 rounded bg-slate-950/70 border border-space-border/50">
-            <div className="font-mono text-[11px] text-amber-400 font-semibold uppercase flex items-center gap-1">
-              <Zap className="w-3 h-3 text-amber-400" />
-              <span>Scientific Purpose:</span>
+            <div className="font-mono text-[11px] text-amber-400 font-bold uppercase flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <Award className="w-3.5 h-3.5 text-amber-400" />
+                <span>Why It Matters:</span>
+              </span>
+              <ProvenanceBadge type={mission.scientificPurpose.factType} />
             </div>
-            <p className="text-xs text-slate-300 font-sans leading-relaxed line-clamp-2">
-              {mission.scientificPurpose.value}
+            <p className="text-xs text-slate-200 font-sans leading-relaxed line-clamp-2">
+              {keyAchievement}
             </p>
           </div>
         </div>
       </div>
 
       {/* Card Footer */}
-      <div className="px-6 py-4 bg-slate-900/40 border-t border-space-border/40">
+      <div className="px-6 py-4 bg-slate-900/40 border-t border-space-border/40 flex items-center justify-between">
         <Link
           href={`/mission/${mission.id}`}
           className="w-full inline-flex items-center justify-between font-mono text-xs text-slate-300 group-hover:text-amber-400 uppercase tracking-wider font-semibold"
